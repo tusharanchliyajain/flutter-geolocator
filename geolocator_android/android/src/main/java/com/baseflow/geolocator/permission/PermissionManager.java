@@ -196,7 +196,7 @@ public class PermissionManager
   private static List<String> getLocationPermissionsFromManifest(Context context)
       throws PermissionUndefinedException {
     boolean fineLocationPermissionExists =
-        PermissionUtils.hasPermissionInManifest(context, Manifest.permission.ACCESS_FINE_LOCATION);
+        PermissionUtils.hasPermissionInManifest(context, Manifest.permission.ACCESS_COARSE_LOCATION);
     boolean coarseLocationPermissionExists =
         PermissionUtils.hasPermissionInManifest(
             context, Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -208,7 +208,7 @@ public class PermissionManager
     List<String> permissions = new ArrayList<>();
 
     if (fineLocationPermissionExists) {
-      permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+      permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
     }
 
     if (coarseLocationPermissionExists) {

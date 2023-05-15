@@ -12,7 +12,7 @@ import com.baseflow.geolocator.errors.ErrorCodes;
 public class LocationAccuracyManager {
 
   public LocationAccuracyStatus getLocationAccuracy(Context context, ErrorCallback errorCallback) {
-    if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+    if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION)
         == PackageManager.PERMISSION_GRANTED) {
       return LocationAccuracyStatus.precise;
     } else if (ContextCompat.checkSelfPermission(
